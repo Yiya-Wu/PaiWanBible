@@ -1,15 +1,26 @@
-import requests
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
 from bs4 import BeautifulSoup
 
-file_path = "/Users/yiyawu/Documents/yiya/00.txt"
+def main():
+    file_path = "/Users/yiyawu/Documents/yiya/00.txt"
 
-with open(file_path, 'r') as file:
-    html_contents = file.read()
-    print(html_contents)
+    # Open the file in read mode ('r')
+    with open(file_path, 'r') as file:
+        # Read the contents of the file
+        html_contents = file.read()
+        print(html_contents)
     
-soup = BeautifulSoup(html_contents, "html.parser")
+        soup = BeautifulSoup(html_contents, "html.parser")
 
-links = soup.find_all("a", class_="some-class")
+    # Example: Find all <a> tags with class "some-class"
+        links = soup.find_all("a", class_="some-class")
 
-for link in links:
-    print(link.get("href"))
+    # Iterate through the found links and do something with them
+        for link in links:
+            print(link.get("href"))
+    return None
+    
+if __name__ == "__main__":
+    main()
