@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 file_path = "/Users/yiyawu/Documents/yiya/00.txt"
 
 with open(file_path, 'r') as file:
-    # Read the contents of the file
     html_contents = file.read()
     print(html_contents)
     
