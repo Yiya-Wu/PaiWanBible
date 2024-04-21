@@ -4,7 +4,6 @@
 from bs4 import BeautifulSoup
 
 def main():
-    file_path = "/Users/yiyawu/Documents/yiya/00.txt"
 
     # Open the file in read mode ('r')
     with open(file_path, 'r') as file:
@@ -23,4 +22,5 @@ def main():
     return None
     
 if __name__ == "__main__":
+    file_path = "/Users/yiyawu/Documents/yiya/00.txt"
     main()
