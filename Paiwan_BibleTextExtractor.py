@@ -13,10 +13,10 @@ def main():
     
         soup = BeautifulSoup(html_contents, "html.parser")
 
-    # Example: Find all <a> tags with class "some-class"
+        # Example: Find all <a> tags with class "some-class"
         links = soup.find_all("a", class_="some-class")
 
-    # Iterate through the found links and do something with them
+        # Iterate through the found links and do something with them
         for link in links:
             print(link.get("href"))
     return None
